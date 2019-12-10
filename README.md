@@ -1,5 +1,8 @@
 ## GDS datasets for cola analysis
 
+- [script for downloading and preprocessing]()
+- [scrit for cola analysis]()
+
 |ID                                                                              |Title                                                                                                                                                                                              |Samples   |Features   |
 |:-------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------|:----------|
 |<a href='https://www.ncbi.nlm.nih.gov/sites/GDSbrowser?acc=GDS1048'>GDS1048</a> |<a href='https://cola-gds.github.io/GDS1048/cola_report.html'>Lymphoblastoid cell lines from CEPH/Utah families</a>                                                                                |167       |23916      |
