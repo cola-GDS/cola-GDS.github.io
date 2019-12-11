@@ -3,20 +3,19 @@
 In this collection, cola analysis was applied to 206 GDS datasets. Click following link to see how the data was processed and analyzed. 
 
 <details><summary>Data processing and analysis</summary>
-<p>
-
-GDS datasets were downloaded from [GEO database](https://www.ncbi.nlm.nih.gov/geo/) by [GEOquery package](https://bioconductor.org/packages/GEOquery/). The datasets were selected by the MESH term: `Homo sapiens"[porgn] AND 50[n_samples] : 500[n_samples] AND "gds"[Filter]`. `GDS1761` was removed from the analysis due to error from `GEOquery`. For each GDS dataset, rows where there is no microarray probe IDs were removed. If the value type for the dataset is not two-channel microarray, the distribution of expression values was tested against normal distribution by KS test. If the KS statistics is larger than 0.3, we assume the expression values do not follow normal distribution and `log2(x+1)` transformation is applied on. `GDS2808` was additionally processed that samples with more than 25% NA values were removed. Finally, quantile normalization was applied to the samples for each dataset.
-
-
-- [script for downloading and preprocessing](https://github.com/jokergoo/cola_manuscript/tree/master/download)
-- [script for cola analysis](https://github.com/jokergoo/cola_manuscript/tree/master/test_cohort)
-
-Users need to use R with version >= 3.6.0 to read the `*.rds` files provided in the following table.
-
-</p>
+  <p></p>
+<p>GDS datasets were downloaded from <a href="https://www.ncbi.nlm.nih.gov/geo/" rel="nofollow">GEO database</a> by <a href="https://bioconductor.org/packages/GEOquery/" rel="nofollow">GEOquery package</a>. The datasets were selected by the MESH term: <code>Homo sapiens"[porgn] AND 50[n_samples] : 500[n_samples] AND "gds"[Filter]</code>. <code>GDS1761</code> was removed from the analysis due to error from <code>GEOquery</code>. For each GDS dataset, rows where there is no microarray probe IDs were removed. If the value type for the dataset is not two-channel microarray, the distribution of expression values was tested against normal distribution by KS test. If the KS statistics is larger than 0.3, we assume the expression values do not follow normal distribution and <code>log2(x+1)</code> transformation is applied on. <code>GDS2808</code> was additionally processed that samples with more than 25% NA values were removed. Finally, quantile normalization was applied to the samples for each dataset.</p>
+<ul>
+<li><a href="https://github.com/jokergoo/cola_manuscript/tree/master/download">script for downloading and preprocessing</a></li>
+<li><a href="https://github.com/jokergoo/cola_manuscript/tree/master/test_cohort">script for cola analysis</a></li>
+</ul>
+<p>Users need to use R with version &gt;= 3.6.0 to read the <code>*.rds</code> files provided in the following table.</p>
+<p></p>
 </details>
 
-|ID                                                                              |Title                                                                                                                                                                                              |Samples |Features |File                                                                       |
+<p></p>
+
+|ID                                                                              |Title (click for cola report)                                                                                                                                                                                             |Samples |Features |File                                                                       |
 |:-------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------|:--------|:------------------------------------------------------------------------------|
 |<a href='https://www.ncbi.nlm.nih.gov/sites/GDSbrowser?acc=GDS1048'>GDS1048</a> |<a href='https://cola-gds.github.io/GDS1048/cola_report.html'>Lymphoblastoid cell lines from CEPH/Utah families</a>                                                                                |167     |23916    |<a href='https://cola-gds.github.io/GDS1048/GDS1048_cola_all.rds'>rds_file</a> |
 |<a href='https://www.ncbi.nlm.nih.gov/sites/GDSbrowser?acc=GDS1059'>GDS1059</a> |<a href='https://cola-gds.github.io/GDS1059/cola_report.html'>Acute myeloid leukemia response to chemotherapy</a>                                                                                  |58      |12625    |<a href='https://cola-gds.github.io/GDS1059/GDS1059_cola_all.rds'>rds_file</a> |
